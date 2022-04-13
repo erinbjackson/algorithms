@@ -29,7 +29,10 @@
 
 # end
 # p show_me_money("i hate $$$$ i love money i $know i know im crazy")
+
+
 # COME BACK TO THIS PROBLEM
+# I could get the problem to work but I couldn't target the last character if it was an odd number because my itterator was iterating in twos.
 # def alternate_caps(string)
 #   i = 1
 #   j = 0
@@ -45,3 +48,68 @@
 #   new_string.join("")
 # end
 # p alternate_caps("hello, how are your porcupines today?")
+
+# def first_dup(string)
+#   letters_arr = string.split("")
+#   dup_let = ""
+#   i = 0
+#   while i < letters_arr.length
+#     j = i +1
+#     while j < letters_arr.length
+#       if letters_arr[i] != letters_arr[j]
+#         j += 1
+#       else
+#         dup_let << letters_arr[j]
+#         return dup_let
+#         break
+#       end
+#     end
+#     i += 1
+#   end
+# end
+# p first_dup("abcdefghhijkkloooop")
+
+# def is_palindrome(string)
+#   i = 0
+#   rev_word = ""
+#   while i < string.length
+#     rev_word =  string[i] + rev_word 
+#     i += 1
+#   end
+#   if rev_word == string
+#     true
+#   else
+#     false
+#   end
+# end
+# p is_palindrome("baloney")
+
+# def hamming(string1, string2)
+#   count = 0
+#   i = 0
+#   while i < string1.length
+#     if string1[i] != string2[i]
+#       count +=1
+#     end
+#     i +=1
+#   end
+#   count
+# end
+# p hamming( "ABCDEFF", "ABCXEOf")
+
+def reverse_word(sentence)
+  i = 0
+  sent_arr = sentence.split(" ")
+  rev_sent = ""
+  sent_arr.length.times do
+    rev_sent =  sent_arr[i] +" " +rev_sent 
+    i +=1
+  end
+  # if rev_sent[-1] == " "
+  #   rev_sent.chop
+  # end
+
+  rev_sent.chop
+  
+end
+p reverse_word("popcorn is so cool isn’t it yeah i thought so")

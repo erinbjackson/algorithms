@@ -54,19 +54,99 @@
 #If two numbers == 10, add those numbers to the answer array. 
 #if answer array is empty, return false
 
-def two_sum(array)
-  i = 0
-  answer = []
-  while i < array.length
-    j = i + 1
-    while j < array.length
-      if array[i] + array[j] == 10
-        answer << array[i] && answer << array[j]
-      end
-      j +=1  
+# def two_sum(array)
+#   i = 0
+#   answer = []
+#   while i < array.length
+#     j = i + 1
+#     while j < array.length
+#       if array[i] + array[j] == 10
+#         answer << array[i] && answer << array[j]
+#       end
+#       j +=1  
+#     end
+#     i += 1
+#   end
+#   answer
+# end
+# p two_sum([0, 10, 12, 8, 5, 3])
+
+# def merge_two(arr1, arr2)
+#   joint_arr = []
+#   sorted_array = []
+#   arr1.each do | num |
+#     joint_arr << num
+#   end
+#   arr2.each do | num |
+#     joint_arr << num
+#   end
+#   i = 0
+#   smallest = joint_arr[i]
+#   # sorted_array << smallest
+#   while i < joint_arr.length
+#     if joint_arr[i] < smallest
+#       sorted_array << joint_arr[i]
+#     end
+#     i += 1
+#   end
+  
+#   sorted_array
+# end
+# p merge_two([6, 9], [1, 5, 8])
+
+
+#### COME BACK TO THIS ONE AND ONE ABOVE IT. Just Sorting array by value.
+# def sort(array)
+#   sorted_array = []
+#   i = 0
+#   j = i + 1
+#   smallest = array[i]
+#   while j < array.length
+#     if array[i] <= array[j]
+#       j +=1
+#     elsif array[i] > array[j]
+#       smallest = array[j]
+#       sorted_array.append(smallest) 
+#       j += 1
+#     end
+#     p sorted_array
+#     i +=1
+
+#   end
+  
+# end
+# p sort([ 10, 12, 8, 5, 3])
+
+# def coolio_array(array)
+#   i = 0
+#   j = array.length-1
+#   test_array = []
+#   while i < array.length
+#     if array[i] + array[j] != 100
+#       return false
+#       break
+#     end
+#     i +=1 
+#     j -=1
+#   end
+#   return true
+# end
+# p coolio_array([90, 20, 70, 100, 30, 80, 10])
+
+
+
+def check_array(array)
+  l = 0
+  pref_array = []
+  while l < array[0].length
+    if
+      array.all?{ |element| element[l] == array[0][l] }
+      pref_array << array[0][l]
+    else 
+      break
     end
-    i += 1
+    l += 1
   end
-  answer
+  pref_array.join('')
 end
-p two_sum([0, 10, 12, 8, 5, 3])
+p check_array(["flower","flowrr","flowht"])
